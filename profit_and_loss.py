@@ -25,9 +25,9 @@ def profit_loss():
     for i in range(4,len(profitandloss)-4,5):
         if float(profitandloss[i+5]) - float(profitandloss[i])>0:
             profit_surplus = profit_surplus + 1   
-        elif float(profitandloss[i+5]) - float(profitandloss[i])<=0:
+        elif int(profitandloss[i+5]) - int(profitandloss[i])<=0:
             profit_deficit_day.append(profitandloss[i+1])
-            profit_deficit_amt.append(abs(float(profitandloss[i+5])-float(profitandloss[i])))
+            profit_deficit_amt.append(abs(int(profitandloss[i+5])-int(profitandloss[i])))
    
     if profit_surplus == len(profitandloss)/2:
         profit_results = "HIGHER"

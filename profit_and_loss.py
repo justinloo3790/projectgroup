@@ -49,3 +49,4 @@ def profit_loss():
         
         else:
             f.write("[{0}] NET PROFIT ON EACH DAY IS {1} THAN THE PREVIOUS DAY\n".format(profit_details,profit_results))
+profit_loss()

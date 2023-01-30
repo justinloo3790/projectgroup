@@ -22,13 +22,12 @@ def profit_loss():
         for line in reader:
                 for value in line:
                     profitandloss.append(value)
-
-    for i in range(1,len(profitandloss)-1,2):
-        if float(profitandloss[i+2])-float(profitandloss[i])>0:
-            profit_surplus = profit_surplus +1   
-        elif float(profitandloss[i+2])-float(profitandloss[i])<=0:
+    for i in range(4,len(profitandloss)-4,5):
+        if float(profitandloss[i+5]) - float(profitandloss[i])>0:
+            profit_surplus = profit_surplus + 1   
+        elif float(profitandloss[i+5]) - float(profitandloss[i])<=0:
             profit_deficit_day.append(profitandloss[i+1])
-            profit_deficit_amt.append(abs(float(profitandloss[i+2])-float(profitandloss[i])))
+            profit_deficit_amt.append(abs(float(profitandloss[i+5])-float(profitandloss[i])))
    
     if profit_surplus == len(profitandloss)/2:
         profit_results = "HIGHER"

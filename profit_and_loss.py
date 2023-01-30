@@ -18,7 +18,6 @@ def profit_loss():
         # use `next()` to skip the header.
         next(reader)
 
-
         #Create nested loop to access each value in the list and append the value to the 'profitandloss' list.
         for line in reader:
                 for value in line:
@@ -50,8 +49,7 @@ def profit_loss():
     else:
         profit_details = "PROFIT DEFICIT" 
     
-
-    #Iterates items in the list and prints a message showing details of  
+    #Iterates items in the list and writes a message showing details of  
     #whether it is a net profit surplus, net profit loss or profit deficit with the amounts and day on the text file
     with open("summary_report.txt", "a") as f:
         

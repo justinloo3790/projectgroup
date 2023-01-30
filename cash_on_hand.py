@@ -39,8 +39,8 @@ def coh():
             cash_deficit_amt.append(int(cashonhand[k]) - int(cashonhand[k+2]))
             cash_deficit_day.append(cashonhand[k+1])
 
-    #The if else will summarise the results and determine whether if all of the days were more or less than the previous 
-    #if its neither, it has an mixed number of shortages and surplus then it will be categorised as cash deficit
+    #The if else will summarise the results and determine if all the days were more or less than the previous 
+    #if it's neither, it has an mixed number of shortages and surplus then it will be categorised as cash deficit
     if number_of_surplus == len(cashonhand)/2:
         cash_results = "HIGHER"
         cash_details = "CASH SURPLUS"
@@ -50,7 +50,7 @@ def coh():
     else:
         cash_details = "CASH DEFICIT"
 
-    #Iterates items in the list and prints a message showing details of
+    #Iterates items in the list and writes a message showing details of
     #whether it is cash surplus, cash shortage or cash deficit with the amounts and day.
     with open("summary_report.txt", "a") as f:
         if cash_results == 0:

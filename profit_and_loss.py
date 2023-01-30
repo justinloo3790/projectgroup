@@ -22,7 +22,6 @@ def profit_loss():
         for line in reader:
                 for value in line:
                     profitandloss.append(value)
-                print(profitandloss)
 
     for i in range(1,len(profitandloss)-1,2):
         if float(profitandloss[i+2])-float(profitandloss[i])>0:

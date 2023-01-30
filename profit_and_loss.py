@@ -1,4 +1,4 @@
-#import csv module
+#Import csv module
 import csv
 
 def profit_loss():

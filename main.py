@@ -8,4 +8,3 @@ def main():
     # profit_loss()
 
 main()
-print('a')  

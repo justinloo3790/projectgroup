@@ -19,12 +19,13 @@ def profit_loss():
         next(reader)
 
 
-        #Create nested loop to access each value in the list and append the value to the profitandloss list.
+        #Create nested loop to access each value in the list and append the value to the 'profitandloss' list.
         for line in reader:
                 for value in line:
                     profitandloss.append(value)
+    
     #The 'i' in the loop represents the position of the value in the list
-    #The loop starts from 4th number in the list and only takes the net profit of each day which are in intervals of 5 in the profitandloss list               
+    #The loop starts from the 4th number in the list and only takes the net profit of each day which are in intervals of 5 in the 'profitandloss' list               
     for i in range(4,len(profitandloss)-4,5):
         #if the value of the current day is higher than the value of the previous day
         if float(profitandloss[i+5]) - float(profitandloss[i])>0:
@@ -39,7 +40,7 @@ def profit_loss():
             #is appended into the profit_deficit_amt list
             profit_deficit_amt.append(abs(int(profitandloss[i+5])-int(profitandloss[i])))
     #The if else will summarise the results and determine whether if all of the days were more or less than the previous 
-    #if its neither, it has an mixed number of losses and surpluses then it will be categorised as profit deficit
+    #if its neither, it has a mixed number of losses and surpluses then it will be categorised as profit deficit
     if profit_surplus == len(profitandloss)/2:
         profit_results = "HIGHER"
         profit_details = "NET PROFIT SURPLUS"

@@ -13,10 +13,10 @@ def coh():
     #Creating file path for the excel
     with open('csv_reports/cash-on-hand-usd.csv', 'r') as file:
 
-        # instantiate a reader object
+        #Instantiate a reader object
         reader = csv.reader(file)
 
-        # use `next()` to skip the header.
+        #Use `next()` to skip the header.
         next(reader)
 
     #Create nested loop to access each value in the list and append the value to the 'cashonhand' list.
@@ -31,7 +31,7 @@ def coh():
         #If the current day is more than the previous day, meant that the current day amount is more than the previous day amount.
         if float(cashonhand[k+2]) > float(cashonhand[k]):
 
-        #since current is more than previous it will be recorded and it will collate the total number of days that are more than its previous day
+        #Since current is more than previous it will be recorded and it will collate the total number of days that are more than its previous day
             number_of_surplus+=1
 
         #If its less than the previous day, the shortaged amount and its day will be added into a list respectiviely.

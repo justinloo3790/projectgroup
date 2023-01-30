@@ -9,7 +9,7 @@ def profit_loss():
     profit_surplus = 0
 
     #Creating file path for the excel
-    with open('csv_reports/cash-on-hand-usd.csv', 'r') as file:
+    with open('csv_reports/profit-and-loss-usd.csv', 'r') as file:
 
         # instantiate a reader object
         reader = csv.reader(file)

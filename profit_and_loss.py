@@ -34,6 +34,9 @@ def profit_loss():
     if profit_surplus == len(profitandloss)/2:
         profit_results = "HIGHER"
         profit_details = "NET PROFIT SURPLUS"
+    elif profit_surplus == 0:
+        profit_results = "LOWER"
+        profit_details = "NET PROFIT LOSS"
     else:
         profit_details = "PROFIT DEFICIT" 
     

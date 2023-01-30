@@ -25,9 +25,9 @@ def profit_loss():
                 print(profitandloss)
 
     for i in range(1,len(profitandloss)-1,2):
-        if float(profitandloss[i+2]-profitandloss[i])>0:
+        if float(profitandloss[i+2])-float(profitandloss[i])>0:
             profit_surplus = profit_surplus +1   
-        elif float(profitandloss[i+2]-profitandloss[i])<=0:
+        elif float(profitandloss[i+2])-float(profitandloss[i])<=0:
             profit_deficit_day.append(profitandloss[i+1])
             profit_deficit_amt.append(abs(float(profitandloss[i+2])-float(profitandloss[i])))
    
